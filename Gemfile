@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '6.1.4.6'
+gem 'rails',      '6.1.4.6'
 # Use Puma as the app server
 gem 'puma',       '5.3.1'
 # Use SCSS for stylesheets
@@ -43,6 +43,10 @@ group :test do
   gem 'capybara',           '3.35.3'
   gem 'selenium-webdriver', '3.142.7'
   gem 'webdrivers',         '4.6.0'
+end
+
+group :production do
+  gem 'pg', '1.2.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
